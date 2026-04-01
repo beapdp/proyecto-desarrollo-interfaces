@@ -1,1 +1,8 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #030617;
+}
+
+/* Forzamos que 'dark' se active cuando el ancestro tenga la clase .dark */
+@variant dark (&:where(.dark, .dark *));
